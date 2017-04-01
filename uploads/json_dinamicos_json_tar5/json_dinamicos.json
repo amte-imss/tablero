@@ -1,0 +1,8 @@
+{
+ "nombre":"nombre prueba",
+ "descripcion":"descripcion prueba",
+ "fecha_inicio":"2016/01/01",
+ "fecha_fin":"2016/12/31",
+ "columnas":["c1", "c2"], 
+ "contenido":[["a1", "b1"],["a2", "b2"]]
+}

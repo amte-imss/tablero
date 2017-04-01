@@ -1,0 +1,26 @@
+ <div ng-show="show" class="col-md-3 left_col">
+    <div class="left_col scroll-view">
+        <div class="navbar nav_title" style="border: 0;">
+          <a class="site_title"> <span>Tablero control</span></a>
+        </div>
+        <div class="clearfix"></div>
+        <br/>
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+                <ul class="nav side-menu" > 
+                    <li ng-repeat="element in menuElements">
+                        <a ng-if="element.url !== null && element.acceso " href="{{element.url}}">{{element.label}}</a>
+                        <a ng-if="element.url == null && element.acceso " >{{element.label}}</a>
+                        <ul ng-if="typeof(element.childs) !== 'undefined' " class="nav child_menu">
+                            <li ng-repeat="child in element.childs" ng-if="child.acceso">
+                                <a ng-if="child.acceso" ng-href="{{child.url}}">{{child.label}}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /sidebar menu -->
+    </div>
+</div>

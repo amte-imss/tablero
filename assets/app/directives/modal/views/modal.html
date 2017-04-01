@@ -1,0 +1,20 @@
+<div id="{{modalId}}" class="modal fade" tabindex="-1" role="dialog" >
+  <div ng-class="clases.tamanno" class="modal-dialog" role="document">
+    <div class="modal-content" ng-class="clases.color">
+      <div class="modal-header">
+        <button ng-if="botonCerrar" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">{{config.txtHead}}</h4>
+      </div>
+      <div class="modal-body">
+        {{config.txtBody}}
+      </div>
+      <div class="modal-footer" ng-if="botonAceptar">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button ng-click="config.aceptarCallBack()" type="button" class="btn btn-primary">Aceptar</button>
+      </div>
+      <div class="modal-footer" ng-if="!botonAceptar">
+        <button  type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+      </div>  
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
